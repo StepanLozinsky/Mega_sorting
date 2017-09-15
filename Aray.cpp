@@ -7,6 +7,24 @@ using namespace std;
 
 
 
+void Array::Insert_sort(long long int begin, long long int end)
+{
+
+	for (int i = 0; i < size; i++) {
+		int temp = Arr[i];
+		int j = i - 1;
+		while (j >= 0 && Arr[j] > temp)
+		{
+			Arr[j + 1] = Arr[j];
+			j--;
+		}
+		Arr[j + 1] = temp;
+	}
+}
+
+
+
+
 void Array::Bubble_sort( long long int end)
 {
 	for (int i = 0; i < end - 1; ++i) {
