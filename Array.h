@@ -12,6 +12,7 @@ class Array
 
   public:
 	Array(long long int _size_);
+	void Bubble_sort(long long int end);
 	void Quiq_sort(long long int begin, long long int end);
 	void Merge_sort(long long int begin, long long int end);
 	void Heap_sort();
