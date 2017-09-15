@@ -20,7 +20,7 @@ int main()
 		cout << "________________________________________________________________________________" << endl;
 		cout << "                                |    MENU   |                                   " << endl;
 		cout << "________________________________|___________|___________________________________" << endl;
-		cout << "1) Quiq sort;\n2) Marge sort\n3) Heap sort\n4) Bubble sort\n5) New array\n6) Exit.\n\n\n";
+		cout << "1) Quiq sort;\n2) Marge sort\n3) Heap sort\n4) Bubble sort\n5) Insert sort\n6) New array\n7) Exit.\n\n\n";
 		do
 		{
 			cout << "\nEnter number of menu: ";
@@ -67,13 +67,23 @@ int main()
 				Arr.Print();
 				cout << "\nTime: " << double(time2 - time1) << "s\n\n";
 			}
-			case 5: break;
-			case 6: return 0;
+			case 5: 
+			{
+				cout << "\n\nINSERT SORT\n\n";
+				time1 = (double)clock() / CLOCKS_PER_SEC;
+				Arr.Insert_sort(0,N-1);
+				time2 = (double)clock() / CLOCKS_PER_SEC;
+				Arr.Print();
+				cout << "\nTime: " << double(time2 - time1) << "s\n\n";
+			}
+			break;
+			case 6: break;
+			case 7: return 0;
 			default: cout << ("Wrong number!!!") << "\n\n\n";
 			}
 			cout << "\n\n\n\n\n";
 
-		} while (menu != 6);
+		} while (menu != 7);
 	} while (true);
 
 	system("pause");
