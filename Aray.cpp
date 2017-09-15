@@ -7,6 +7,20 @@ using namespace std;
 
 
 
+void Array::Bubble_sort( long long int end)
+{
+	for (int i = 0; i < end - 1; ++i) {
+		for (int j = 0; j < end - i - 1; ++j) {
+			if (Arr[j] > Arr[j + 1]) {
+				swap(Arr[j], Arr[j + 1]);
+			}
+		}
+	}
+}
+
+
+
+
 
 void Array::Quiq_sort(long long int begin, long long int end)
 {
@@ -64,19 +78,19 @@ void Heapily(long long int *Arr, long long int father, long long int size)
 {
 	if (2 * father + 1 < size)
 	{
-		long long int son = 2 * father + 1; //перший син
-		if (2 * father + 2 < size && Arr[2 * father + 2] >= Arr[son]) // другий син, якщо існує і більший за першого
+		long long int son = 2 * father + 1; //ГЇГҐГ°ГёГЁГ© Г±ГЁГ­
+		if (2 * father + 2 < size && Arr[2 * father + 2] >= Arr[son]) // Г¤Г°ГіГЈГЁГ© Г±ГЁГ­, ГїГЄГ№Г® ВіГ±Г­ГіВє Ві ГЎВіГ«ГјГёГЁГ© Г§Г  ГЇГҐГ°ГёГ®ГЈГ®
 		{
 			son = 2 * father + 2;
 		}
-		if (Arr[father] < Arr[son]) //найбільший синів більший за батька
+		if (Arr[father] < Arr[son]) //Г­Г Г©ГЎВіГ«ГјГёГЁГ© Г±ГЁГ­ВіГў ГЎВіГ«ГјГёГЁГ© Г§Г  ГЎГ ГІГјГЄГ 
 		{
 			swap(Arr[father], Arr[son]);
 
 
 		}
 
-		return Heapily(Arr, son, size);  //предок наступний елемент
+		return Heapily(Arr, son, size);  //ГЇГ°ГҐГ¤Г®ГЄ Г­Г Г±ГІГіГЇГ­ГЁГ© ГҐГ«ГҐГ¬ГҐГ­ГІ
 
 	}
 }
