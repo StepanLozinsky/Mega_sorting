@@ -15,6 +15,7 @@ class Array
 	void Bubble_sort(long long int end);
 	void Quiq_sort(long long int begin, long long int end);
 	void Merge_sort(long long int begin, long long int end);
+	void Insert_sort(long long int begin, long long int end);
 	void Heap_sort();
 	void Print() const;
 	~Array();
