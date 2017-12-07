@@ -1,6 +1,6 @@
 #include <iostream>
 #include <time.h>
-#include "Aray.h"
+#include "Array.h"
 
 using namespace std;
 
